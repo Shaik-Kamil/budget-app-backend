@@ -11,7 +11,7 @@
     "url": "git+https://github.com/Shaik-Kamil/budget-app-backend.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Shaik Kamil",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Shaik-Kamil/budget-app-backend/issues"
@@ -22,6 +22,9 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "morgan": "^1.10.0",
-    "node": "^19.3.0"
+    "next": "^13.1.1",
+    "node": "^19.3.0",
+    "nodemon": "^2.0.20",
+    "uuid": "^9.0.0"
   }
 }
