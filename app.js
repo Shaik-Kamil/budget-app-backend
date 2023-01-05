@@ -13,15 +13,15 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan('tiny'));
 
-// pathing
+//! pathing
 app.use('/transactions', transaction);
 
-// Home page
+//! Home page
 app.get('/', (req, res) => {
   res.send('Welcome to the budget Tracker app');
 });
 
-// Error page
+//! Error page
 app.get('*', (req, res) => {
   res.status(404).json({ error: 'Page Not Found' });
 });

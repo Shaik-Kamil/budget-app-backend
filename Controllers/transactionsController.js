@@ -5,8 +5,6 @@ const { validateURL } = require('../models/validation');
 
 //! list of all transactions
 transaction.get('/', (req, res) => {
-  //   const { item_name, amount, date, from, category } = req.query;
-
   res.status(200).json({ transactionArray });
 });
 
@@ -35,6 +33,13 @@ transaction.put('/:index', (req, res) => {
   } else {
     res.status(404).json({ error: 'Transaction not found' });
   }
-  transactionArray[index] = {};
+});
+
+//! delete transaction
+transaction.delete('/:index', (req, res) => {
+  const { index } = req.params.index;
+
+  transactionArray.pop(req.body);
+  res.json(transactionArray.at(-1));
 });
 module.exports = transaction;
