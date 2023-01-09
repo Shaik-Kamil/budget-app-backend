@@ -20,7 +20,7 @@ transaction.get('/:index', (req, res) => {
 //! Create a new transaction
 transaction.post('/', validateURL, (req, res) => {
   transactionArray.push(req.body);
-  res.json(transactionArray.at(-1));
+  res.json(transactionArray[transactionArray.length - 1]);
 });
 
 //! update a transaction
@@ -38,6 +38,6 @@ transaction.delete('/:index', (req, res) => {
   const { index } = req.params.index;
 
   transactionArray.pop(req.body);
-  res.json(transactionArray.at(-1));
+  res.json(transactionArray[transactionArray.length - 1]);
 });
 module.exports = transaction;
